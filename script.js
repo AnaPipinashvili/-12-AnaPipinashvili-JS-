@@ -94,10 +94,11 @@ for(let a of array2){
 // 1 
 
 function sum (...args){
-    numberSum = 0;
+     let  numberSum = 0;
     for(let i of args){
         if(i>0){
             numberSum=numberSum+i
+            // numberSum += i
             
         }
     }
@@ -121,23 +122,36 @@ sum (10, 50, 6, 7, 8, 11, 6, 3, 9);
 
 // 3
 
-let userA = {
+let user5 = {
     firstname: 'giorgi',
     lastname: 'saakadze',
     age: 32,
     isloggedin: true
   }
 
-  function A () {
-    if (userA.isloggedin == true ) {
-        console.log(userA.firstname + ' ' + userA.lastname);
-    } else {console.log(false)}
+  function A (user5) {
+    if (user5.isloggedin == 'true') {
+       return user5.firstname + ' ' + user5.lastname;
+    } 
+    return false;
   }
-  A ();
-
+ let result = A(user5);
+ console.log (result); 
+//  აქ აწითლებს RESULT-ს და ვერ მივხვდი რატომ ( ხაზზე 107 და  140 )
 
 //   4
 
-let maxnumber = [22, 13, 1980, 1992, 2222, 15, -6, 55, 17];
+function getMax (getNumbers) {
+    let maxValue = 0;
 
-(ეს ზუსტად ვერ გავაკეთე და გადავხედავ კიდე ლექციას)
+    for (let item of getNumbers){
+        if(item > maxValue){
+            maxValue = item; 
+        }
+    }
+    return maxValue;
+
+    }
+
+console.log( getMax ([22, 13, 1980, 1992, 2222, 15, -6, 55, 17]))
+
